@@ -5,6 +5,7 @@ import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import SpeechBubble from '@/components/home/SpeechBubble';
 import MentorSection from '@/components/home/MentorSection';
+import RightFoot from '@/components/home/RightFoot';
 
 export default function Home() {
 
@@ -17,19 +18,14 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-          <Image
-            src="/images/right-foot.png"
-            alt="발자국"
-            className={styles.foot}
-            width={63}
-            height={128}
-            priority
+          <RightFoot
+            right={40}
+            top={10}
           />
           <div className={`${styles.mainText} right ${styles.center}`}>
             <Image
                 src="/images/right-foot.png"
                 alt="발자국"
-                className={styles.foot}
                 style={{marginRight:320}}
                 width={80}
                 height={128}
