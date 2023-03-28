@@ -21,6 +21,7 @@ export default function Home() {
             className={styles.foot}
             width={63}
             height={128}
+            style={{objectPosition:"center"}}
             priority
           />
           <div className={`${styles.mainText} right ${styles.center}`}>
