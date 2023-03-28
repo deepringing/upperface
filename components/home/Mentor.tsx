@@ -1,18 +1,10 @@
 import styles from "@/styles/components/home/mentor.module.scss";
 import Image from 'next/image';
+import { MentorInfo } from '@/types/mentor.type';
+import React from 'react';
 
-type tag = {
-  image?: string,
-  tag: string,
-}
-
-const Mentor = (props: {
-  image: string,
-  name: string,
-  tags: tag[],
-  description: string
-}) => (
-  <div className={styles.mentor}>
+const Mentor = React.forwardRef<HTMLDivElement, MentorInfo>((props, ref) => (
+  <div className={styles.mentor} ref={ref}>
     <div className={styles.profile}>
       <Image
         src={props.image}
@@ -23,7 +15,7 @@ const Mentor = (props: {
       <p className={styles.name}>{props.name}</p>
       <div className={styles.tags}>
         {
-          props.tags.map((t, index) => (
+          props.tags?.map((t, index) => (
             <div className={styles.tag} key={index}>
               {t.image && <Image src={t.image} alt={"tag"} width={24} height={24}/>}
               <span>{t.tag}</span>
@@ -37,6 +29,6 @@ const Mentor = (props: {
       상담 신청하기
     </button>
   </div>
-)
+))
 
 export default Mentor;
