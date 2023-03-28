@@ -23,7 +23,7 @@ export default function MentorSection(props: {
     );
     if (!mentorRef.current) return;
     scrollTrigger.observe(mentorRef.current);
-  }, []);
+  }, [props.reverse]);
 
   return (
     <section className={`${homeStyles.section} ${styles.mentor} ${props.reverse ? styles.reverse : ''}`}>
