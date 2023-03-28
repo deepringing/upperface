@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Mentor(props: {
   image: string,
   name: string,
-  tag: string[],
+  //tag: string[],
   description: string
 }) {
   return (

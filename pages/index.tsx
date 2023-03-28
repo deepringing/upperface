@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Foot from '@/components/home/stressfoot';
 import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import Mentor from '@/components/home/Mentor';
+import {mockComponent} from "react-dom/test-utils";
 
 export default function Home() {
   return (
@@ -14,21 +16,22 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-          <Image
-            src="/images/right-foot.png"
-            alt="발자국"
-            className={styles.foot}
-            width={63}
-            height={128}
-            style={{objectPosition:"center"}}
-            priority
-          />
           <div className={`${styles.mainText} right ${styles.center}`}>
+            <Image
+                src="/images/right-foot.png"
+                alt="발자국"
+                className={styles.foot}
+                style={{marginRight:320}}
+                width={80}
+                height={128}
+                priority
+            />
             <p><span className="purple bold">나의 길</span>을</p>
             <p>먼저 걸어본</p>
             <p>사람에게</p>
           </div>
         </section>
+        <Foot />
         <section className={styles.section}>
           <div className={`${styles.mainText} left ${styles.bottom}`}>
             <p>편하게</p>
@@ -58,7 +61,6 @@ export default function Home() {
           <Mentor
             image="/images/person-taerae.png"
             name="김태래"
-            tag={}
             description="반갑습니다! ㅎㅎ 서울대학교 심리학과 20학번 김태래입니다. 입시 관련 상담이 필요하시다면 연락주세요!"
           />
         </section>
@@ -71,14 +73,10 @@ export default function Home() {
           <Mentor
             image="/images/person-jaehyun.png"
             name="정재"
-            tag={}
             description="안녕하세요. 배달의 민족 정산 플렛폼 개발 팀 정재현입니다. 취업 관련 혹은 이력서, 자소서 관련 상담이 필요하시다면 연락주세요. 기다리겠습니다!"
           />
         </section>
         <section className={`${styles.section} ${styles.centerSection}`}>
-          <button style={styles.button}>
-            상담 신청하기
-          </button>
         </section>
         <section className={`${styles.section} ${styles.centerSection}`}>
           <p>선배와 나의</p>
