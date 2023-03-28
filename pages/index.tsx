@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import Mentor from '@/components/home/Mentor';
+import SpeechBubble from '@/components/home/SpeechBubble';
 
 export default function Home() {
   return (
@@ -20,7 +21,6 @@ export default function Home() {
             className={styles.foot}
             width={63}
             height={128}
-            style={{objectPosition:"center"}}
             priority
           />
           <div className={`${styles.mainText} right ${styles.center}`}>
@@ -86,6 +86,30 @@ export default function Home() {
             <p className="purple">연결고리</p>
             <p className={`purple bold ${styles.big}`}>윈물</p>
           </div>
+        </section>
+        <section className={styles.section}>
+          <SpeechBubble text={"연락주셨군요..! 반가워요 😁"} opacity={"more"} tail={"left"} position={{ top: 17, left: 4 }}/>
+          <SpeechBubble opacity={"more"} tail={"left"} position={{ top: 5, left: 32 }}/>
+          <SpeechBubble opacity={"more"} tail={"right"} position={{ top: 12, right: 10 }}/>
+          <SpeechBubble text={"진짜 감사합니다 ㅠㅠ"} opacity={"more"} tail={"left"} position={{ top: 42, left: 3 }}/>
+          <SpeechBubble opacity={"more"} tail={"left"} position={{ top: 43, left: 34 }}/>
+          <SpeechBubble text={"수고하셨어요 꼭 합격하세요! 후배님!"} opacity={"more"} tail={"right"}
+                        position={{ top: 32, right: 2 }}/>
+          <SpeechBubble text={"감사합니다"} opacity={"more"} tail={"left"} position={{ bottom: 16, left: 26 }}/>
+          <SpeechBubble text={"미래를 응원합니다~"} opacity={"more"} tail={"right"} position={{ bottom: 19, right: 3 }}/>
+          <SpeechBubble text={"만나서 반갑습니다. 바로 진행할까요?"} opacity={"half"} tail={"right"}
+                        position={{ top: 9, right: 13 }}/>
+          <SpeechBubble text={"안녕하세요 선배님 저는 정윤오입니다"} opacity={"half"} tail={"left"} position={{ top: 29, left: 36 }}/>
+          <SpeechBubble text={"저도 선배님처럼 고려대 가고 싶은데..."} opacity={"half"} tail={"left"}
+                        position={{ bottom: 31, left: 11 }}/>
+          <SpeechBubble text={"감사합니다 선배님! 덕분에 많은 도움을 얻었어요"} opacity={"half"} tail={"left"}
+                        position={{ bottom: 9, left: 5 }}/>
+          <SpeechBubble text={"즐거운 시간이었습니다! 응원하겠습니다!!"} opacity={"half"} tail={"right"}
+                        position={{ top: 42, right: 9 }}/>
+          <SpeechBubble text={"저랑 완전 같은 상황이네요! 잘 연락주셨어요"} opacity={"half"} tail={"right"}
+                        position={{ bottom: 29, right: 32 }}/>
+          <SpeechBubble text={"고민 되는 부분이 있다면 언제든지 다시 연락해요!"} opacity={"half"} tail={"right"}
+                        position={{ bottom: 8, right: 25 }}/>
         </section>
       </main>
     </>
