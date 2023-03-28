@@ -52,6 +52,10 @@
   border-radius: 100px;
   font-size: 60px;
   color: white;
+
+  animation-name : 왔다갔다;
+  animation-duration : 1.5s;
+  animation-iteration-count : infinite;
 }
 
 .centerSection {
@@ -63,4 +67,16 @@
 
 .big {
   font-size: 140px;
+}
+
+@keyframes 왔다갔다 {
+  20% {
+    transform : rotate(10deg);
+  }
+  40% {
+    transform : rotate(-10deg);
+  }
+  60% {
+    transform : rotate(0deg);
+  }
 }

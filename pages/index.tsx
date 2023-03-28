@@ -6,6 +6,7 @@ import Mentor from '@/components/home/Mentor';
 import SpeechBubble from '@/components/home/SpeechBubble';
 
 export default function Home() {
+
   return (
     <>
       <Head>
