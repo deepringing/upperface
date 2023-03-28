@@ -57,32 +57,34 @@ export default function Home() {
           <Mentor
             image="/images/person-taerae.png"
             name="김태래"
-            tag={}
+            tags={[{ image: "/images/school-seoul.png", tag: "서울대" }, { tag: "심리학과" }, { tag: "자소서" }]}
             description="반갑습니다! ㅎㅎ 서울대학교 심리학과 20학번 김태래입니다. 입시 관련 상담이 필요하시다면 연락주세요!"
           />
         </section>
         <section className={`${styles.section} ${styles.mentor}`}>
+          <Mentor
+            image="/images/person-jaehyun.png"
+            name="정재현"
+            tags={[{ image: "/images/company-baemin.png", tag: "배달의 민족" }, { tag: "이력서" }, { tag: "취업 상담" }]}
+            description="안녕하세요. 배달의 민족 정산 플렛폼 개발 팀 정재현입니다. 취업 관련 혹은 이력서, 자소서 관련 상담이 필요하시다면 연락주세요. 기다리겠습니다!"
+          />
           <div className={styles.midText}>
             <p>내가 가고 싶은</p>
             <p>회사를 간</p>
             <p className="purple bold">대학교 선배</p>
           </div>
-          <Mentor
-            image="/images/person-jaehyun.png"
-            name="정재"
-            tag={}
-            description="안녕하세요. 배달의 민족 정산 플렛폼 개발 팀 정재현입니다. 취업 관련 혹은 이력서, 자소서 관련 상담이 필요하시다면 연락주세요. 기다리겠습니다!"
-          />
         </section>
         <section className={`${styles.section} ${styles.centerSection}`}>
-          <button style={styles.button}>
+          <button className={styles.button}>
             상담 신청하기
           </button>
         </section>
         <section className={`${styles.section} ${styles.centerSection}`}>
-          <p>선배와 나의</p>
-          <p className="purple">연결고리</p>
-          <p className="purple bold">윈물</p>
+          <div className={`${styles.mainText} center`}>
+            <p>선배와 나의</p>
+            <p className="purple">연결고리</p>
+            <p className={`purple bold ${styles.big}`}>윈물</p>
+          </div>
         </section>
       </main>
     </>

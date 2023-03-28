@@ -40,9 +40,10 @@
 
 .mentor {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 100px;
 }
 
 .button {
@@ -50,10 +51,16 @@
   padding: 56px 80px;
   border-radius: 100px;
   font-size: 60px;
+  color: white;
 }
 
 .centerSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.big {
+  font-size: 140px;
 }
