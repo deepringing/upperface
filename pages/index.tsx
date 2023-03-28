@@ -4,6 +4,7 @@ import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import Mentor from '@/components/home/Mentor';
 import SpeechBubble from '@/components/home/SpeechBubble';
+import MentorSection from '@/components/home/MentorSection';
 
 export default function Home() {
 
@@ -50,32 +51,32 @@ export default function Home() {
             isRight={true}
           />
         </section>
-        <section className={`${styles.section} ${styles.mentor}`}>
-          <div className={styles.midText}>
-            <p>내가 가고 싶은</p>
-            <p>대학을 간</p>
-            <p className="purple bold">고등학교 선배</p>
-          </div>
-          <Mentor
-            image="/images/person-taerae.png"
-            name="김태래"
-            tags={[{ image: "/images/school-seoul.png", tag: "서울대" }, { tag: "심리학과" }, { tag: "자소서" }]}
-            description="반갑습니다! ㅎㅎ 서울대학교 심리학과 20학번 김태래입니다. 입시 관련 상담이 필요하시다면 연락주세요!"
-          />
-        </section>
-        <section className={`${styles.section} ${styles.mentor}`}>
-          <Mentor
-            image="/images/person-jaehyun.png"
-            name="정재현"
-            tags={[{ image: "/images/company-baemin.png", tag: "배달의 민족" }, { tag: "이력서" }, { tag: "취업 상담" }]}
-            description="안녕하세요. 배달의 민족 정산 플렛폼 개발 팀 정재현입니다. 취업 관련 혹은 이력서, 자소서 관련 상담이 필요하시다면 연락주세요. 기다리겠습니다!"
-          />
-          <div className={styles.midText}>
-            <p>내가 가고 싶은</p>
-            <p>회사를 간</p>
-            <p className="purple bold">대학교 선배</p>
-          </div>
-        </section>
+        <MentorSection
+          mentor={
+            <Mentor
+              image="/images/person-taerae.png"
+              name="김태래"
+              tags={[{ image: "/images/school-seoul.png", tag: "서울대" }, { tag: "심리학과" }, { tag: "자소서" }]}
+              description="반갑습니다! ㅎㅎ 서울대학교 심리학과 20학번 김태래입니다. 입시 관련 상담이 필요하시다면 연락주세요!"
+            />
+          }
+          destination={"대학교"}
+          school={"고등학교"}
+          reverse={false}
+        />
+        <MentorSection
+          mentor={
+            <Mentor
+              image="/images/person-jaehyun.png"
+              name="정재현"
+              tags={[{ image: "/images/company-baemin.png", tag: "배달의 민족" }, { tag: "이력서" }, { tag: "취업 상담" }]}
+              description="안녕하세요. 배달의 민족 정산 플렛폼 개발 팀 정재현입니다. 취업 관련 혹은 이력서, 자소서 관련 상담이 필요하시다면 연락주세요. 기다리겠습니다!"
+            />
+          }
+          destination={"회사"}
+          school={"대학교"}
+          reverse={true}
+        />
         <section className={`${styles.section} ${styles.centerSection}`}>
           <button className={styles.button}>
             상담 신청하기

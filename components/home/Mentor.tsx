@@ -6,23 +6,22 @@ type tag = {
   tag: string,
 }
 
-export default function Mentor(props: {
+const Mentor = (props: {
   image: string,
   name: string,
   tags: tag[],
   description: string
-}) {
-  return (
-    <div className={styles.mentor}>
-      <div className={styles.profile}>
-        <Image
-          src={props.image}
-          alt={'mentor'}
-          width={160}
-          height={160}
-        />
-        <p className={styles.name}>{props.name}</p>
-        <div className={styles.tags}>
+}) => (
+  <div className={styles.mentor}>
+    <div className={styles.profile}>
+      <Image
+        src={props.image}
+        alt={'mentor'}
+        width={160}
+        height={160}
+      />
+      <p className={styles.name}>{props.name}</p>
+      <div className={styles.tags}>
         {
           props.tags.map((t, index) => (
             <div className={styles.tag} key={index}>
@@ -31,13 +30,13 @@ export default function Mentor(props: {
             </div>
           ))
         }
-        </div>
       </div>
-      <p className={styles.description}>{props.description}</p>
-      <button className={styles.button}>
-        상담 신청하기
-      </button>
     </div>
-  )
-}
+    <p className={styles.description}>{props.description}</p>
+    <button className={styles.button}>
+      상담 신청하기
+    </button>
+  </div>
+)
 
+export default Mentor;
