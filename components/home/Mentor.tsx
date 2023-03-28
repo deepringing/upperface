@@ -31,4 +31,6 @@ const Mentor = React.forwardRef<HTMLDivElement, MentorInfo>((props, ref) => (
   </div>
 ))
 
+Mentor.displayName = "Mentor";
+
 export default Mentor;
