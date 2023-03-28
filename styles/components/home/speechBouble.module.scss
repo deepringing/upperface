@@ -1,0 +1,63 @@
+@import "../../colors.scss";
+
+.speechBubble {
+  position: absolute;
+  padding: 20px 60px;
+  background-color: $purple;
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+  display: inline-block;
+  border-radius: 20px;
+  width: 338px;
+  min-height: 100px;
+  word-break: keep-all;
+
+  animation-name : 움찔움찔;
+  animation-duration : 3s;
+  animation-iteration-count : infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -75px;
+    margin-top: -55px;
+    border-top: 55px solid $purple;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+  }
+
+  &.left {
+    &::after {
+      left: 20%;
+    }
+  }
+
+  &.right {
+    &::after {
+      right: 20%;
+    }
+  }
+
+  &.half {
+    opacity: 0.69;
+  }
+
+  &.more {
+    opacity: 0.39;
+  }
+}
+
+@keyframes 움찔움찔 {
+  0% {
+    transform : scale(1);
+  }
+  50% {
+    transform : scale(1.1);
+  }
+  100% {
+    transform : scale(1);
+  }
+}

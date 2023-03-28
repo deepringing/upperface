@@ -1,0 +1,46 @@
+@import "../../colors.scss";
+
+.mentor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.start {
+  opacity: 1 !important;
+  animation-name: 스르륵;
+  animation-duration: 2s;
+}
+
+.startReverse {
+  opacity: 1 !important;
+  animation-name: 반대스르륵;
+  animation-duration: 2s;
+}
+
+@keyframes 스르륵 {
+  0% {
+    opacity: 0;
+    transform : translateX(150px);
+  }
+  100% {
+    opacity: 1;
+    transform : translateX(0px);
+  }
+}
+
+@keyframes 반대스르륵 {
+  0% {
+    opacity: 0;
+    transform : translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform : translateX(0px);
+  }
+}

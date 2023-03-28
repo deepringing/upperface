@@ -1,13 +1,41 @@
 @import "../../colors.scss";
 
 .mentor {
-  width: 45vw;
+  width: 37vw;
   height: 70vh;
-  padding: 40px 60px;
+  padding: 40px 70px;
+  box-shadow: 0 4px 40px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
 }
 
-.tag {
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
 
+.tags {
+  display: flex;
+  gap: 24px;
+
+  .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    border-radius: 15px;
+    background-color: $grey;
+    padding: 6px 13px;
+  }
 }
 
 .name {
@@ -19,6 +47,7 @@
   font-weight: 400;
   font-size: 15px;
   word-break: keep-all;
+  line-height: 19px;
 }
 
 .button {
@@ -26,4 +55,5 @@
   padding: 12px 14px;
   font-size: 17px;
   border-radius: 20px;
+  color: white;
 }
