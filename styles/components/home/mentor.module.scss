@@ -1,0 +1,29 @@
+@import "../../colors.scss";
+
+.mentor {
+  width: 45vw;
+  height: 70vh;
+  padding: 40px 60px;
+}
+
+.tag {
+
+}
+
+.name {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 15px;
+  word-break: keep-all;
+}
+
+.button {
+  background-color: $purple;
+  padding: 12px 14px;
+  font-size: 17px;
+  border-radius: 20px;
+}
