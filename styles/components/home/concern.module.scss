@@ -1,0 +1,60 @@
+@import "../../colors.scss";
+
+.concern {
+  position: relative;
+  display: inline-block;
+}
+
+.tape {
+  background-color: $light-skyblue;
+  padding: 14px 35px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 18px;
+  border-radius: 20px;
+  position: absolute;
+  top: -25px;
+
+  &._left {
+    left: 33px;
+  }
+
+  &._right {
+    right: 33px;
+  }
+}
+
+.box {
+  width: 70vw;
+  height: 30vh;
+  box-shadow: 0 4px 40px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  &._leftBox {
+    flex-direction: row;
+  }
+
+  &._rightBox {
+    flex-direction: row-reverse;
+  }
+
+  padding: 20px 30px;
+
+  .content {
+    max-width: 55%;
+    word-break: keep-all;
+    font-weight: 300;
+    font-size: 20px;
+
+    &._leftContent {
+      text-align: left;
+    }
+
+    &._rightContent {
+      text-align: right;
+    }
+  }
+}
