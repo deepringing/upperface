@@ -16,18 +16,18 @@ export default function SpeechBubble(props: {
 }) {
   return (
     <>
-      <div className={`${styles.speechBubble} ${styles[props.opacity]} ${styles[props.tail]} ${props.className ?? ''}`}>
+      <div
+        className={`${styles.speechBubble} ${styles[props.opacity]} ${styles[props.tail]} ${props.className ?? ''}`}
+        style={{
+          position: "absolute",
+          left: props.position?.left ? props.position?.left + '%' : '',
+          right: props.position?.right ? props.position?.right + '%' : '',
+          bottom: props.position?.bottom ? props.position?.bottom + '%' : '',
+          top: props.position?.top ? props.position?.top + '%' : '',
+        }}
+      >
         {props.text && props.text}
       </div>
-
-      <style jsx>{`
-        div {
-          left: ${props.position?.left ? props.position?.left + '%' : 'auto'};
-          right: ${props.position?.right ? props.position?.right + '%' : 'auto'};
-          bottom: ${props.position?.bottom ? props.position?.bottom + '%' : 'auto'};
-          top: ${props.position?.top ? props.position?.top + '%' : 'auto'};
-        }
-      `}</style>
     </>
   )
 }
