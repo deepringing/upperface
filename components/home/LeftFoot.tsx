@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from '@/styles/pages/home.module.scss';
 
-export default function RightFoot(props: {
+export default function LeftFoot(props: {
     right?: number,
     left?: number,
     top?: number,
@@ -11,7 +11,6 @@ export default function RightFoot(props: {
         <Image
             src="/images/left-foot.png"
             alt="발자국"
-            className={styles.LeftFoot}
             style={{
                 position: "absolute",
                 right: props.right,

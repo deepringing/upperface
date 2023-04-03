@@ -11,7 +11,6 @@ export default function RightFoot(props: {
     <Image
       src="/images/right-foot.png"
       alt="발자국"
-      className={styles.RightFoot}
       style={{
         position: "absolute",
         right: props.right,

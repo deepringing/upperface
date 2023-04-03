@@ -4,6 +4,7 @@ import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import SpeechBubble from '@/components/home/SpeechBubble';
 import MentorSection from '@/components/home/MentorSection';
+import RightFoot from "@/components/home/RightFoot";
 
 export default function Home() {
 
