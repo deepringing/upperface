@@ -4,7 +4,6 @@ import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import SpeechBubble from '@/components/home/SpeechBubble';
 import MentorSection from '@/components/home/MentorSection';
-import RightFoot from '@/components/home/RightFoot';
 
 export default function Home() {
 
@@ -17,7 +16,6 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-
           <div className={`${styles.mainText} right ${styles.center}`}>
             <RightFoot
                 right={400}
