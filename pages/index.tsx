@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Foot from '@/components/home/stressfoot';
 import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
 import SpeechBubble from '@/components/home/SpeechBubble';
 import MentorSection from '@/components/home/MentorSection';
+import RightFoot from "@/components/home/RightFoot";
 
 export default function Home() {
 
@@ -16,18 +17,15 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-          <Image
-            src="/images/right-foot.png"
-            alt="발자국"
-            className={styles.foot}
-            width={63}
-            height={128}
-            priority
-          />
           <div className={`${styles.mainText} right ${styles.center}`}>
+            <RightFoot
+                right={400}
+                top={30}
+            />
             <p><span className="purple bold">나의 길</span>을</p>
             <p>먼저 걸어본</p>
             <p>사람에게</p>
+            <Foot/>
           </div>
         </section>
         <section className={styles.section}>
