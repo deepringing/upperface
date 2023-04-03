@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Foot from '@/components/home/stressfoot';
 import styles from '@/styles/pages/home.module.scss'
 import Concern from '@/components/home/Concern';
@@ -18,25 +17,18 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.section}>
-          <RightFoot
-            right={40}
-            top={10}
-          />
+
           <div className={`${styles.mainText} right ${styles.center}`}>
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                style={{marginRight:320}}
-                width={80}
-                height={128}
-                priority
+            <RightFoot
+                right={400}
+                top={30}
             />
             <p><span className="purple bold">나의 길</span>을</p>
             <p>먼저 걸어본</p>
             <p>사람에게</p>
+            <Foot/>
           </div>
         </section>
-        <Foot />
         <section className={styles.section}>
           <div className={`${styles.mainText} left ${styles.bottom}`}>
             <p>편하게</p>

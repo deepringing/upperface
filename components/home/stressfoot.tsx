@@ -1,54 +1,60 @@
-import styles from "@/styles/pages/home.module.scss";
-import Image from "next/image";
+import RightFoot from "@/components/home/RightFoot";
+import LeftFoot from "@/components/home/LeftFoot";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {useEffect} from "react";
 
 export default function Foot() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1200,
+        });
+    })
+
     return (
-        <div style={{display:"flex", flexDirection:"column"}}>
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                className={styles.foot}
-                style={{marginLeft:1200}}
-                width={90}
-                height={128}
-                priority
-            />
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                className={styles.foot}
-                style={{marginLeft:1230, marginTop:60}}
-                width={90}
-                height={128}
-                priority
-            />
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                className={styles.foot}
-                style={{marginLeft:1000, marginTop:30}}
-                width={90}
-                height={128}
-                priority
-            />
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                className={styles.foot}
-                style={{marginLeft:800, marginTop : 40}}
-                width={90}
-                height={128}
-                priority
-            />
-            <Image
-                src="/images/right-foot.png"
-                alt="발자국"
-                className={styles.foot}
-                style={{marginLeft:850, marginTop : 50}}
-                width={90}
-                height={128}
-                priority
-            />
-        </div>
+        <>
+            <div data-aos="fade-in"  data-aos-delay="100">
+                <RightFoot
+                    right={340}
+                    top={0}
+                />
+            </div>
+            <div data-aos="fade-in"  data-aos-delay="500">
+                <LeftFoot
+                    right={600}
+                    top={120}
+                />
+            </div>
+            <div data-aos="fade-in" data-aos-delay="1000">
+                <RightFoot
+                    right={460}
+                    top={290}
+                />
+            </div>
+            <div data-aos="fade-in" data-aos-delay="1500">
+                <LeftFoot
+                    right={730}
+                    top={390}
+                />
+            </div>
+            <div data-aos="fade-in" data-aos-delay="2000">
+                <RightFoot
+                    right={630}
+                    top={600}
+                />
+            </div>
+            <div data-aos="fade-in" data-aos-delay="2500">
+                <LeftFoot
+                    right={900}
+                    top={730}
+                />
+            </div>
+            <div data-aos="fade-in" data-aos-delay="3000">
+                <RightFoot
+                    right={800}
+                    top={900}
+                />
+            </div>
+        </>
     )
 }
