@@ -49,12 +49,6 @@ export default function Foot() {
                     top={730}
                 />
             </div>
-            <div data-aos="fade-in" data-aos-delay="3000">
-                <RightFoot
-                    right={800}
-                    top={900}
-                />
-            </div>
         </>
     )
 }
